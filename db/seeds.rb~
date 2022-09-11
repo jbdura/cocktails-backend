@@ -1,10 +1,10 @@
 puts "🌱 Seeding spices..."
 
 
-investor1 = Investor.create(name: "Bidura")
-investor2 = Investor.create(name: "Esther")
-investor3 = Investor.create(name: "Samuel")
-investor4 = Investor.create(name: "Charity")
+investor1 = Investor.create(name: "Melinda")
+investor2 = Investor.create(name: "Chester")
+investor3 = Investor.create(name: "Nathan")
+investor4 = Investor.create(name: "Corey")
 
 transaction1 = StockTransaction.create(company_name: "TSLA", price: 600, date: "1/1/22" , investor_id: investor1.id )
 transaction2 = StockTransaction.create(company_name: "NVDA", price: 180, date: "1/2/22" , investor_id: investor2.id )
