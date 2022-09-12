@@ -1,8 +1,7 @@
 # Phase 3 Project Guidelines
 
 # Details
-- The project is a stock investor app. User can add details to the portfolio
-
+- The project is a stock in
 
 ## Learning Goals
 
@@ -32,6 +31,17 @@ For this project, you must:
   perform CRUD actions.
 - Use good OO design patterns. You should have separate classes for each of your
   models, and create instance and class methods as necessary.
+
+For example, build a todo list application with a React frontend interface and a
+Sinatra backend API, where a user can:
+
+- **Create** a new todo
+- **Read** a list of all todos
+- **Update** an individual todo
+- **Delete** a todo
+
+A `Todo` can be tagged with a `Category`, so that each todo _belongs to_ a
+category and each category _has many_ todos.
 
 ## Getting Started
 
