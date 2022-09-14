@@ -1,16 +1,38 @@
-puts "🌱 Seeding spices..."
+# require 'faker'
+# require 'cocktaildb'
 
 
-investor1 = Investor.create(name: "Bidura")
-investor2 = Investor.create(name: "Esther")
-investor3 = Investor.create(name: "Samuel")
-investor4 = Investor.create(name: "Charity")
+Review.destroy_all
+Cocktail.destroy_all
 
-transaction1 = StockTransaction.create(company_name: "TSLA", price: 600, date: "1/1/22" , investor_id: investor1.id )
-transaction2 = StockTransaction.create(company_name: "NVDA", price: 180, date: "1/2/22" , investor_id: investor2.id )
-transaction3 = StockTransaction.create(company_name: "AMZN", price: 130, date: "1/3/22" , investor_id: investor2.id )
-transaction4 = StockTransaction.create(company_name: "NFLX", price: 200, date: "1/4/22" , investor_id: investor3.id )
-transaction5 = StockTransaction.create(company_name: "HOOD", price: 9, date: "1/4/22" , investor_id: investor4.id )
+
+
+puts "🌱 Seeding data..."
+
+# Seed your database here
+
+
+cocktails = []
+
+12.times do 
+    random = CocktailDB::random
+    cocktails<<random
+end
+    cocktails.each do |cocktail|
+     cocktail = Cocktail.create({
+        cocktail_name: cocktail["strDrink"],
+        image: cocktail["strDrinkThumb"]
+    })
+end
+
+
+#seeding the reviews
+
+24.times do
+    Review.create(
+        comment: Faker::Hipster.word,
+        cocktail_id: rand(1..10),
+    )
+end
 
 puts "✅ Done seeding!"
-

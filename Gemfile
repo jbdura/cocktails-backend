@@ -34,6 +34,13 @@ gem "sqlite3", "~> 1.4"
 # Require all files in a folder
 gem "require_all", "~> 3.0"
 
+#require faker to play with data
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+#sourcing the cocktails
+gem 'cocktaildb'
+#another way to source-requests
+gem 'rest-client'
+
 # These gems will only be used when we are running the application locally
 group :development do
   gem "pry", "~> 0.14.1"
